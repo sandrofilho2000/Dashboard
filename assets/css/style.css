@@ -48,7 +48,7 @@ body{
 
 .navigation ul li{
     position: relative;
-    width: 200%;
+    width: 100%;
     list-style: none;
 }
 
@@ -116,6 +116,7 @@ body{
     background: transparent;
     box-shadow: 35px 35px 0 10px var(--white); 
     pointer-events: none;
+    z-index: 999999;
 }
 
 .navigation ul li:hover a::after,
