@@ -48,7 +48,7 @@ body{
 
 .navigation ul li{
     position: relative;
-    width: 100%;
+    width: 200%;
     list-style: none;
 }
 
@@ -463,6 +463,9 @@ body{
     .recentOrders{
         overflow-x: auto;
     }
+    .status.inProgress{
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 480px){
@@ -480,7 +483,7 @@ body{
         left: -100%;
         z-index: 1000;
     }
-    .navigation{
+    .navigation.active{
         width: 100%;
         left: 0;
     }
@@ -489,7 +492,7 @@ body{
         z-index: 10001;
     }
 
-    main.active .toogle{
+    div.main.active .toggle{
         position: fixed;
         right: 0;
         left: initial;
