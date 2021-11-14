@@ -316,7 +316,7 @@ body{
 
 .cardHeader h2{
     font-weight: 600;
-    var(--green);
+    color: var(--green);
 }
 
 .btn{
