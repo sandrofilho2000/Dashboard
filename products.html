@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="assets/css/products/products.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <img src="assets/images/devLogoBlack-removebg-preview.png" alt="">
+                        </span>
+                        <span style="font-weight: 600;" class="title">
+                            Sandro <span style="color: #FC5214;">Filho DEV </span> 
+                        </span>
+                    </a>
+                </li>
+                <li class="" >
+                    <a href="painel.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">
+                            Painel
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">
+                            Clients
+                        </span>
+                    </a>
+                </li>
+                <li class="products">
+                    <a href="products.html">
+                        <span class="icon">
+                            <i class='bx bx-cart'></i>
+                        </span>
+                        <span class="title">
+                            Products
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">
+                            Message
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">
+                            Help
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">
+                            Settings
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <span class="title">
+                            Password
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">
+                            Sign Out
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <!--search-->
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="Search Here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!--userImg-->
+                <div class="user">
+                    <img src="assets/images/e.jpeg" alt="">
+                </div>
+            </div>
+
+            <!-- cards -->
+            <div class="cardBox">
+                <div class="card">
+                    <h3>
+                        Pão Funcional 1
+                    </h3>
+                    <img src="assets/images/paoFuncional1.png" alt="">
+                    <p class="cardDescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti provident incidunt illo alias doloribus eos rerum
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>
+                        Pão Funcional 2
+                    </h3>
+                    <img src="assets/images/paoFuncional2.png" alt="">
+                    <p class="cardDescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti provident incidunt illo alias doloribus eos rerum
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>
+                        Brownie
+                    </h3>
+                    <img src="assets/images/brownie.jpg" alt="">
+                    <p class="cardDescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti provident incidunt illo alias doloribus eos rerum
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h3>
+                        Baguete
+                    </h3>
+                    <img src="assets/images/baguetes.png" alt="">
+                    <p class="cardDescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti provident incidunt illo alias doloribus eos rerum
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h3>
+                        Baguete
+                    </h3>
+                    <img src="assets/images/baguetes.png" alt="">
+                    <p class="cardDescription">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti provident incidunt illo alias doloribus eos rerum
+                    </p>
+                </div>
+
+                <div class="card cardPlus">
+                    
+                </div>
+            </div>
+            
+            <div class="details">
+                <div class="produtosContainer">
+                    <div class="containerTop">
+                        <h3>Pão Funcional 1</h3>
+                        <p>+</p>
+                    </div>
+                    <table>
+                        <th></th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Ingredientes</th>
+
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="dragDelete">
+                                    <div class="drag">
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                        <p></p>
+                                    </div>
+    
+                                    <p class="deleteProduct">
+                                        +
+                                    </p>
+                                </div>
+                                
+                            </td>
+                            <td class="nameImg"> 
+                                <div class="tdContainer"> 
+                                    <img src="assets/images/paoFuncional1.png" alt=""> 
+                                    <input type="text" value="Pão Funcional 1">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div class="tdContainer">
+                                    <span>R$</span><input type="number" value="7.00">
+                                </div>
+                            </td>
+                            <td>lorem, lorem, lorem, lorem...</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+    
+    <script src="assets/js/jquery.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script src="assets/js/products/saveProducts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.js" integrity="sha512-Fc8SDJVBwajCGX0A9z8lBeRPaCjR25Ek577z9PtQLB7CLBz7Mw1XhjbcD2yDWrGszL/uezKGidtGCng6Fhz3+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        //MenuToggle
+        let toggle = document.querySelector('.toggle')
+        let navigation = document.querySelector('.navigation')
+        let main = document.querySelector('.main')
+
+        toggle.onclick = ()=>{
+            navigation.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+
+
+        //add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li')
+        function activeLink(){
+            list.forEach((item)=>{
+                item.classList.remove('hovered');
+                this.classList.add('hovered')
+            })
+        }
+
+        list.forEach((item)=>{
+            item.addEventListener('mouseover', activeLink)
+        })
+
+        const cardBox = document.querySelector('.cardBox')
+
+        new Sortable(cardBox, {
+            animation: 350
+        })
+
+        document.querySelectorAll('.cardBox .card').forEach((card)=>{
+            card.addEventListener('mousedown', (e)=>{
+                card.addEventListener('mousemove', (e)=>{
+                    console.log(e.clientX)
+                    console.log(e.clientY)
+                })
+            })
+        })
+
+    </script>
+    
+</body>
+</html>

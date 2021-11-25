@@ -94,7 +94,7 @@ html, body{
     height: 100%;
     width: 100%;
 }
-.navigation ul li a .icon ion-icon{
+.navigation ul li a .icon ion-icon, .navigation ul li a .icon i{
     font-size: 1.75rem;
 }
 
@@ -196,7 +196,7 @@ html, body{
     border: 1px solid var(--black2);
 }
 
-.search label ion-icon{
+.search label ion-icon, .search label i{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
