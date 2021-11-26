@@ -602,6 +602,50 @@
  
         </div>
     </div>
+
+    <div class="warning">
+        <div class="warningContent">
+            <h4>Deseja realmente excluir esse item?</h4>
+
+            <div class="item">
+                <h5>Pão Funcional 1<h5>
+                <img src="assets/images/paoFuncional1.png" alt="">
+            </div>
+
+            <div class="buttons">
+                <span class="yes">SIM</span>
+                <span class="not">NÃO</span>
+            </div>
+        </div>
+
+        <div class="warningSuccess">
+            <h3>
+                Item Excluído!
+            </h3>
+            <i class='bx bxs-check-circle'></i>
+        </div>
+    </div>
+
+    <div class="overlayAddEdit overlay">
+        <div class="overlayContent">
+            <div class="img">
+                <img src="assets/images/brownie.png" alt="">
+            </div>
+            <form action="">
+                <p>NOME:</p>
+                <input type="text" name="productName" value="Brownie">
+
+                <p>DESCRIÇÃO:</p>
+                <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti provident incidunt illo alias doloribus eos rerum
+                </textarea>
+
+                <div class="formSubmits">
+                    <input type="submit" name="yes" value="SALVAR">
+                    <input type="submit" name="not" value="EXCLUIR">
+                </div>
+            </form>
+        </div>
+    </div>
     
     <script src="assets/js/jquery.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -609,6 +653,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script src="assets/js/products/saveProducts.js"></script>
+    <script src="assets/js/products/deleteItem.js"></script>
+    <script src="assets/js/products/categoryAddEdit.js"></script>
+    <script src="assets/js/closeOverlay.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.js" integrity="sha512-Fc8SDJVBwajCGX0A9z8lBeRPaCjR25Ek577z9PtQLB7CLBz7Mw1XhjbcD2yDWrGszL/uezKGidtGCng6Fhz3+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
@@ -634,22 +681,7 @@
 
         list.forEach((item)=>{
             item.addEventListener('mouseover', activeLink)
-        })
-
-        const cardBox = document.querySelector('.cardBox')
-
-        new Sortable(cardBox, {
-            animation: 350
-        })
-
-        document.querySelectorAll('.cardBox .card').forEach((card)=>{
-            card.addEventListener('mousedown', (e)=>{
-                card.addEventListener('mousemove', (e)=>{
-                    console.log(e.clientX)
-                    console.log(e.clientY)
-                })
-            })
-        })
+        })  
 
     </script>
     
