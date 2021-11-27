@@ -488,6 +488,10 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .details .produtosContainer ul li div.dragDeleteContainer {
@@ -561,10 +565,11 @@ html, body {
   height: 100%;
 }
 
-.details .produtosContainer ul li div.nameImg .divContainer img, .details .produtosContainer ul li div.price .divContainer img {
+.details .produtosContainer ul li div.nameImg .divContainer label img, .details .produtosContainer ul li div.price .divContainer label img {
   height: 50px;
   width: 50px;
   margin-right: 10px;
+  cursor: pointer;
   border-radius: 50%;
 }
 
@@ -600,15 +605,158 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 200px;
+  width: 250px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-.details .produtosContainer ul li div.components p {
+.details .produtosContainer ul li div.components > p {
   line-height: 20px;
   display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu {
+  width: 250px;
+  height: 0;
+  opacity: 0;
+  z-index: -999;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+  position: absolute;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .topMenu {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px 10px 0 0;
+  background: #20B042;
+  text-align: center;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .topMenu p {
+  color: white;
+  display: block;
+  line-height: 18px;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .componentsField {
+  width: 100%;
+  height: auto;
+  grid-gap: 10px;
+  -ms-grid-columns: (60px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 60px);
+  line-height: initial;
+  padding: 5px;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .componentsField span.componentSingle {
+  display: inline-block;
+  max-height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ff000065;
+  margin-bottom: 4px;
+  border: 1px solid red;
+  color: white;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .componentsField span.componentSingle i {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .componentsField span.margin {
+  margin-right: 4px !important;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .addNewComponent {
+  width: 100%;
+  height: auto;
+  line-height: initial;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .addNewComponent input {
+  height: 25px;
+  border: 1px solid #B9B9B9;
+  background: #F4F4F4;
+  width: 81%;
+  padding-left: 4px;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .addNewComponent span {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  color: #20B042;
+  cursor: pointer;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .componentSave {
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  background: #20B042;
+  height: 30px;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .componentSave p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu .componentSave:hover {
+  opacity: 0.8;
+}
+
+.details .produtosContainer ul li div.components .componentsMenu.active {
+  height: auto;
+  z-index: 12;
+  position: relative;
+  opacity: 1;
+}
+
+.details .produtosContainer ul li div.components.active p.componentsToggle {
+  position: absolute;
+  font-size: 0;
+}
+
+.details .produtosContainer ul li div.components.active .componentsMenu {
+  position: relative;
+  z-index: initial;
+  height: auto;
+  opacity: 1;
 }
 
 .details .produtosContainer ul li.newProductLi {

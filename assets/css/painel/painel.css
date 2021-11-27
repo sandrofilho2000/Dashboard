@@ -248,8 +248,8 @@ html, body {
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
-  
-    grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 .cardBox .card {
@@ -528,14 +528,14 @@ html, body {
     left: 300px;
   }
   .cardBox {
-    
+    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .details {
-    
+    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
   .recentOrders {
@@ -548,7 +548,7 @@ html, body {
 
 @media (max-width: 480px) {
   .cardBox {
-    
+    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
   .cardHeader h2 {
@@ -576,4 +576,4 @@ html, body {
     color: #fff;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=painel.css.map */
