@@ -300,7 +300,36 @@ html, body {
     width: 75;
     border-radius: 50%;
   }
+
+  .hoverInfo{
+    height: 50px;
+    width: 125px;
+    z-index: -9;
+    border-radius: 7px 7px 7px 0;
+    position: absolute;
+    background: white;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+    right: -30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: all ease-in-out 0.5s;
+    text-align: left;
+    padding: 5px;
+    padding-top: 13px;
+    p{
+      font-size: 12px;
+      color: #20B042;
+    }
+  }
+
+  .hoverInfo.active{
+    z-index: 9;
+    opacity: 1;
+
+  }
 }
+
+
 
 .cardBox .card .cardDescription{
   display: none;
@@ -326,6 +355,7 @@ html, body {
   h3{
     color: #fff;
   }
+
 }
 
 
@@ -345,21 +375,20 @@ html, body {
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
     overflow: scroll;
-    padding: 15px;
+    
 
     .containerTop{
       position: sticky;
       background: #fff;
       left: 0;
       z-index: 2;
-      top: -16px;
+      top: -4px;
       width: 102%;
-      padding: 0 2%;
+      padding: 0 4%;
       height: 50px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-
+      justify-content: space-between;
       h3{
         color: #20B042;
       }
@@ -374,16 +403,48 @@ html, body {
       }
     }
 
-    table{
+    ul{
       text-align: left;
       width: 100%;
       border-collapse: collapse;
-      tr{
+      padding: 15px;
+      .ul_description{
+        padding-left: 82px;
         height: 70px;
+        width: 100%;
+        min-width: 580px;
+        display: flex;
+        align-items: center;
+        border-bottom: 2px double rgba(153, 153, 153, 0.301);
+        span{
+          display: block;
+          font-weight: bold;
+        }
+
+        span.nameDescription{
+          min-width: 215px;
+          width: 35%;
+          margin-right: 3%;
+        }
+        span.priceDescription{
+          min-width: 100px;
+          width: 25%;
+          margin-right: 3%;
+        }
+        span.componentsDescription{
+          min-width: 200px;
+        }
+      }
+
+      li{
+        min-height: 70px;
+        height: auto;
+        width: 100%;
+        min-width: 580px;
         line-height: 70px;
         border-bottom: 2px double rgba(153, 153, 153, 0.301);
-
-        td:first-of-type{
+        display: flex;
+        div.dragDeleteContainer{
           padding: 0 5px;
           .dragDelete{
             height: 100%;
@@ -408,7 +469,7 @@ html, body {
                 border-radius: 50%;
               }
             }
-  
+
             .deleteProduct{
               height: 40px;
               width: 40px;
@@ -423,15 +484,16 @@ html, body {
           }
         }
 
-        td{
+        div.nameImg, div.price{
+          width: 35%;
           height: 70px;
           line-height: 20px;
-
-          .tdContainer{
+          .divContainer{
             display: flex;
             align-items: center;
             width: 100%;
             height: 100%;
+            
             img{
               height: 50px;
               width: 50px;
@@ -456,14 +518,74 @@ html, body {
               width: 50px;
               margin-left: 5px;
             }
+
+            
+            
+          }
+        }
+
+        div.nameImg{
+          min-width: 215px
+        }
+
+        div.price{
+          width: 25%;
+          min-width: 100px;
+        }
+
+        div.components{
+          display: flex;
+          min-width: 200px;
+          align-items: center;
+          p{
+            line-height: 20px;
+            display: block;
+          }
+        }
+      }
+
+      li.newProductLi{
+        padding-left: 40px;
+        opacity: 0;
+        z-index: -9;
+        margin-top: -15px;
+        top: -72px;
+        transition: all ease 0.8s;
+        div{
+          input{
+            outline: 1px solid #20B042 !important;
+            margin-left: 5px;
+          }
+
+          label{
+            img{
+              cursor: pointer;
+            }
+          }
+
+          #productNewName{
+            width: 100px;
           }
           
         }
 
-        .price{
-          width: 200px;
+        div.nameImg{
+          margin-right: 40px;
         }
 
+        div.components{
+          justify-content: center;
+          input{
+            width: 50px;
+          }
+        }
+      }
+
+      li.newProductLi.active{
+        opacity: 1;
+        z-index: initial;
+        margin-top: 0;
+        top: 0;
       }
     }
   }
@@ -702,10 +824,24 @@ html, body {
   .cardBox {
     
         grid-template-columns: repeat(2, 1fr);
+
+        .card{
+          .hoverInfo{
+            right: -12px;
+            bottom: 15px;
+          }
+        }
   }
 }
 
 
+
+
+@media (max-width: 736px) {
+  .ul_description span{
+    margin-right: 0% !important;
+  }
+}
 
 
 @media (max-width: 570px) {
