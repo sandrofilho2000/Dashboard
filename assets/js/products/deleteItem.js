@@ -1,6 +1,9 @@
+import { save } from '../savingLoad.js'
+
 //DELETE PRODUCT
 function deleteItem(e, product){
     product.parentElement.removeChild(product)
+    save()
 }
 
 //CLOSE WARNING

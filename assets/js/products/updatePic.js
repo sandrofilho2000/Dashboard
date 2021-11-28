@@ -1,3 +1,4 @@
+import { save } from '../savingLoad.js'
 
 function updatePic(e, newProduct=false){
     if(newProduct==false){

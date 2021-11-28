@@ -7,20 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="assets/css/products/products.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
+    <div class="loadingSave">
+        <div class="circle">
+            <div class="circleInner">
+
+            </div>
+        </div>
+        <div class="saved">
+            <i class='bx bxs-check-circle'></i>
+            <p>SALVO!</p>
+        </div>
+    </div>
     <div class="container">
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="">
+                    <a class="logo" href="">
                         <span class="icon">
-                            <img src="assets/images/devLogoBlack-removebg-preview.png" alt="">
+                            <img src="assets/images/logo.jpg" alt="">
                         </span>
-                        <span style="font-weight: 600;" class="title">
-                            Sandro <span style="color: #FC5214;">Filho DEV </span> 
+                        <span class="title">
+                            REAL LIFE
                         </span>
                     </a>
                 </li>
@@ -786,6 +798,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js" integrity="sha512-zYXldzJsDrNKV+odAwFYiDXV2Cy37cwizT+NkuiPGsa9X1dOz04eHvUWVuxaJ299GvcJT31ug2zO4itXBjFx4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.js" integrity="sha512-Fc8SDJVBwajCGX0A9z8lBeRPaCjR25Ek577z9PtQLB7CLBz7Mw1XhjbcD2yDWrGszL/uezKGidtGCng6Fhz3+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+    <script type="module" src="assets/js/products/sortableList.js"></script>
     <script type="module" src="assets/js/products/saveProducts.js"></script>
     <script type="module" src="assets/js/products/deleteItem.js"></script>
     <script type="module" src="assets/js/products/categoryAddEdit.js"></script>
@@ -793,7 +806,8 @@
     <script type="module" src="assets/js/products/addProduct.js"></script>
     <script type="module" src="assets/js/products/editComponents.js"></script>
     <script type="module" src="assets/js/closeOverlay.js"></script>
-    <script type="module" src="assets/js/products/sortableList.js"></script>
+    <script type="module" src="assets/js/savingLoad.js"></script>
+
     <script>
         //MenuToggle
         let toggle = document.querySelector('.toggle')

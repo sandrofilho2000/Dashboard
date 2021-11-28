@@ -1,13 +1,22 @@
 import { openingMenu, savingComponents, all} from './editComponents.js';
 import { allDelete } from './deleteItem.js';
+import { allSortable } from './sortableList.js';
+import { save } from '../savingLoad.js'
 
 
-
-function updatePic(e, newProduct=false){
+function updatePic(e, newProduct=false, updateNew=false){
     if(newProduct==false){
-        var file = e.currentTarget.files
-        file = URL.createObjectURL(file[0])
-        e.currentTarget.parentElement.querySelector('img').setAttribute('src', file)
+        if(updateNew==true){
+            var file = e.getAttribute('src')
+            console.log(file)
+            e.parentElement.querySelector('img').setAttribute('src', file)
+        }else{
+            var file = e.currentTarget.files
+            file = URL.createObjectURL(file[0])
+            e.currentTarget.parentElement.querySelector('img').setAttribute('src', file)
+        }
+        
+
     }else{
         var file = e.files
         file = URL.createObjectURL(file[0])
@@ -59,7 +68,7 @@ document.querySelector(".salvarNewProduct").addEventListener('click', (e)=>{
         var imgUrl = document.querySelector("#productNewImg")
         var newProduct = true
         
-        var newLi = `<li>
+        var newLi = `<li draggable='false'>
         <div class="dragDeleteContainer">
             <div class="dragDelete">
                 <div class="drag">
@@ -101,11 +110,7 @@ document.querySelector(".salvarNewProduct").addEventListener('click', (e)=>{
                     <p>Ingredientes</p>
                 </div>
                 <div class="componentsField">
-                    <span class="componentSingle"> lorem  <i class="bx bx-x"></i></span>
-                    <span class="componentSingle"> lorem  <i class="bx bx-x"></i></span>
-                    <span class="componentSingle"> lorem  <i class="bx bx-x"></i></span>
-                    <span class="componentSingle"> lorem  <i class="bx bx-x"></i></span>
-                    <span class="componentSingle"> lorem  <i class="bx bx-x"></i></span>
+
                 </div>
         
                 <div class="addNewComponent">
@@ -121,19 +126,20 @@ document.querySelector(".salvarNewProduct").addEventListener('click', (e)=>{
         `
 
         var newProductAdd = document.createRange().createContextualFragment(newLi)
-
+        var file = newProductAdd.firstChild.querySelector('#updateProductPic').addEventListener('change', (e)=>{
+        
+            updatePic(e)
+        })
+        
         document.querySelector('.produtosContainer ul').insertBefore(newProductAdd.firstChild, document.querySelector(".newProductLi").previousSibling);
 
-        var items = document.querySelector(".produtosContainer ul");
-        new Sortable (items, {
-            animation: 350,
-            draggable: "[draggable]",
-            removeCloneOnHide: true, 
-            handle: '.drag'
-        })
-
+        
         all()
         allDelete()
+        allSortable()
+        save()
+
+
         
         
 
