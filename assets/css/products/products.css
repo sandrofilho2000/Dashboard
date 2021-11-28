@@ -525,6 +525,8 @@ html, body {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: move;
+  position: relative;
+  z-index: 2;
 }
 
 .details .produtosContainer ul li div.dragDeleteContainer .dragDelete .drag p {
@@ -546,6 +548,8 @@ html, body {
           transform: rotate(-45deg);
   cursor: pointer;
   color: red;
+  position: relative;
+  z-index: 2;
 }
 
 .details .produtosContainer ul li div.nameImg, .details .produtosContainer ul li div.price {
@@ -578,6 +582,7 @@ html, body {
   background: none;
   outline: none;
   border: none;
+  max-width: 115px;
   font-size: 16px;
 }
 
@@ -754,14 +759,19 @@ html, body {
 
 .details .produtosContainer ul li div.components.active .componentsMenu {
   position: relative;
-  z-index: initial;
+  z-index: 999;
   height: auto;
   opacity: 1;
+}
+
+.details .produtosContainer ul li.sortable-chosen {
+  background: #19bd9c65;
 }
 
 .details .produtosContainer ul li.newProductLi {
   padding-left: 40px;
   opacity: 0;
+  position: relative;
   z-index: -9;
   margin-top: -15px;
   top: -72px;
@@ -769,9 +779,25 @@ html, body {
   transition: all ease 0.8s;
 }
 
+.details .produtosContainer ul li.newProductLi > * {
+  position: relative;
+  z-index: 99;
+}
+
+.details .produtosContainer ul li.newProductLi div.price {
+  min-width: 150px;
+}
+
 .details .produtosContainer ul li.newProductLi div input {
   outline: 1px solid #20B042 !important;
   margin-left: 5px;
+  padding: 5px;
+}
+
+.details .produtosContainer ul li.newProductLi div span.newComponents {
+  cursor: pointer;
+  line-height: 20px;
+  display: block;
 }
 
 .details .produtosContainer ul li.newProductLi div label img {
@@ -780,6 +806,14 @@ html, body {
 
 .details .produtosContainer ul li.newProductLi div #productNewName {
   width: 100px;
+}
+
+.details .produtosContainer ul li.newProductLi div .productNewValue {
+  margin-right: 10px;
+}
+
+.details .produtosContainer ul li.newProductLi div.active span.newComponents {
+  display: none;
 }
 
 .details .produtosContainer ul li.newProductLi div.nameImg {
@@ -796,9 +830,21 @@ html, body {
   width: 50px;
 }
 
+.details .produtosContainer ul li.newProductLi .salvarNewProduct {
+  position: absolute;
+  font-size: 46px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  display: block;
+  color: #20B042;
+  cursor: pointer;
+}
+
 .details .produtosContainer ul li.newProductLi.active {
   opacity: 1;
-  z-index: initial;
+  z-index: 99;
   margin-top: 0;
   top: 0;
 }
