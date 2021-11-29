@@ -15,4 +15,11 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+
+    img{
+        width: 70%;
+        max-width: 450px;
+        opacity: .9;
+        animation: opacidade 3s infinite;
+    }
 }

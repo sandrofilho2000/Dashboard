@@ -16,4 +16,12 @@
   -ms-flex-pack: center;
   justify-content: center;
 }
+
+.overlayLoad img {
+  width: 70%;
+  max-width: 450px;
+  opacity: .9;
+  -webkit-animation: opacidade 3s infinite;
+          animation: opacidade 3s infinite;
+}
 /*# sourceMappingURL=overlayLoad.css.map */
