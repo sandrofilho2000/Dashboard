@@ -1,4 +1,4 @@
-import { openingMenu, savingComponents, all} from './editComponents.js';
+import { openingMenu, savingComponents, allEdit} from './editComponents.js';
 import { allDelete } from './deleteItem.js';
 import { allSortable } from './sortableList.js';
 import { save } from '../savingLoad.js'
@@ -134,7 +134,7 @@ document.querySelector(".salvarNewProduct").addEventListener('click', (e)=>{
         document.querySelector('.produtosContainer ul').insertBefore(newProductAdd.firstChild, document.querySelector(".newProductLi").previousSibling);
 
         
-        all()
+        allEdit()
         allDelete()
         allSortable()
         save()

@@ -8,10 +8,14 @@
     <title>Painel</title>
     <link rel="stylesheet" href="assets/css/navbar.css">
     <link rel="stylesheet" href="assets/css/painel/painel.css">
+    <link rel="stylesheet" href="assets/css/overlayLoad.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 <body>
+    <div class="overlayLoad">
+        <img src="assets/images/logo.png" alt="">
+    </div>
     <div class="container">
         <div class="navigation">
             <ul>
@@ -368,31 +372,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script src="assets/js/painel/myChart.js"></script>
-    <script>
-        //MenuToggle
-        let toggle = document.querySelector('.toggle')
-        let navigation = document.querySelector('.navigation')
-        let main = document.querySelector('.main')
+    <script type="module" src="assets/js/main.js"></script>
 
-        toggle.onclick = ()=>{
-            navigation.classList.toggle('active')
-            main.classList.toggle('active')
-        }
-
-
-        //add hovered class in selected list item
-        let list = document.querySelectorAll('.navigation li')
-        function activeLink(){
-            list.forEach((item)=>{
-                item.classList.remove('hovered');
-                this.classList.add('hovered')
-            })
-        }
-
-        list.forEach((item)=>{
-            item.addEventListener('mouseover', activeLink)
-        })
-    </script>
 
 </body>
 </html>

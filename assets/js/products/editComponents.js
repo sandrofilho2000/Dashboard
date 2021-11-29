@@ -52,6 +52,7 @@ function addingComponents(e, closeMenu = false){
 //SAVING COMPONENTS
 function savingComponents(e, component, newProduct = false){
     var parent = component.parentElement
+    var li = parent.parentElement.parentElement
     var menu_items = parent.querySelectorAll('.componentsField span')
     var newComponents = ''
     menu_items.forEach((item)=>{
@@ -71,9 +72,11 @@ function savingComponents(e, component, newProduct = false){
         }
 
     }  
+
+    closingMenu(e, li)
 }
 
-function all(){
+function allEdit(){
     
     document.querySelectorAll(".componentsToggle").forEach((component)=>{
         component.addEventListener('click', (e)=>{
@@ -124,5 +127,5 @@ function all(){
 
 }
 
-all()
-export {openingMenu, savingComponents, all}
+allEdit()
+export {openingMenu, savingComponents, allEdit}
