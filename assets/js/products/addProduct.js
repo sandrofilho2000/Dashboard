@@ -3,7 +3,7 @@ import { allDelete } from './deleteItem.js';
 import { allSortable } from './sortableList.js';
 import { save } from '../savingLoad.js'
 
-
+//UPDATE PIC
 function updatePic(e, newProduct=false, updateNew=false){
     if(newProduct==false){
         if(updateNew==true){
@@ -30,6 +30,16 @@ function openInputs(e){
     objDiv.scrollTop = objDiv.scrollHeight - 70;
     document.querySelector('.newProductLi').classList.add('active')
 }
+
+//CLEAN FIELDS{
+function cleanFields(){
+    document.querySelector('.newProductLi img').setAttribute('src', 'assets/images/imgPlaceholder.png')
+    document.querySelector('#productNewName').value = ''
+    document.querySelector('#productNewValue').value = ''
+    document.querySelector('.newProductLi .componentsField').innerHTML = ''
+    document.querySelector('.newProductLi .componentsToggle').innerHTML = 'CLIQUE'
+}
+
 document.querySelector(".addProduct").addEventListener('click', (e)=>{
     openInputs(e)
 })
@@ -138,6 +148,7 @@ document.querySelector(".salvarNewProduct").addEventListener('click', (e)=>{
         allDelete()
         allSortable()
         save()
+        cleanFields()
 
 
         
