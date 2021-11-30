@@ -1,13 +1,12 @@
-$(function(){
-    document.querySelectorAll('.overlay').forEach((overlay)=>{
-        overlay.addEventListener('click', (e)=>{
-            e.currentTarget.style.display = 'none'
-        })
-    })
+import { cleanCategory } from "./products/EditCategory.js"
 
-    document.querySelectorAll('.overlayContent').forEach((overlayContent)=>{
-        overlayContent.addEventListener('click', (e)=>{
-            e.stopPropagation()
-        })
+
+document.querySelectorAll('.overlay .close').forEach((close)=>{
+    close.addEventListener('click', (e)=>{
+        e.currentTarget.parentElement.parentElement.style.display = 'none'
+        var x = true
+        cleanCategory(e, x)
     })
 })
+
+    

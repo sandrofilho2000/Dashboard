@@ -14,91 +14,6 @@
   left: 80px;
 }
 
-.topbar {
-  width: 100%;
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 10px;
-}
-
-.toggle {
-  position: relative;
-  top: 0;
-  width: 60px;
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2.5em;
-  cursor: pointer;
-}
-
-.search {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.search label {
-  position: relative;
-  width: 100%;
-}
-
-.search label input {
-  width: 100%;
-  height: 40px;
-  border-radius: 40px;
-  padding: 2px 20px;
-  font-size: 18px;
-  padding-left: 35px;
-  line-height: 40px;
-  outline: none;
-  border: 1px solid var(--black2);
-}
-
-.search label ion-icon, .search label i {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 10px;
-  font-size: 1.2em;
-}
-
-.user {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.user img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .cardBox {
   position: relative;
   width: 100%;
@@ -142,7 +57,7 @@
 
 .cardBox .card img {
   height: 75px;
-  width: 75;
+  width: 75px;
   border-radius: 50%;
 }
 
@@ -175,6 +90,14 @@
   opacity: 1;
 }
 
+.cardBox .card.sortable-chosen {
+  background: #208cb06b !important;
+}
+
+.cardBox .card.sortable-chosen h3 {
+  color: #fff;
+}
+
 .cardBox .card .cardDescription {
   display: none;
 }
@@ -184,14 +107,13 @@
   text-align: center;
 }
 
-.cardBox .cardPlus::before {
-  line-height: 148px;
+.cardBox .cardPlus span {
+  line-height: 161px;
   width: 100%;
   text-align: center;
-  content: '+';
   color: #fff;
   height: 100%;
-  font-size: 95px;
+  font-size: 96px;
 }
 
 .cardBox .card:hover {
@@ -833,6 +755,22 @@
           align-items: center;
   padding: 20px 0;
   overflow: hidden;
+  position: relative;
+}
+
+.overlay .overlayContent .close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  font-size: 42px;
+  text-align: center;
+  color: #000000c0;
+  top: 10px;
+  right: 10px;
+  line-height: 25px;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .overlay .overlayContent .img {
@@ -841,6 +779,7 @@
 }
 
 .overlay .overlayContent .img img {
+  cursor: pointer;
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -869,8 +808,8 @@
   font-size: 16px;
 }
 
-.overlay .overlayContent form input:focus, .overlay .overlayContent form textarea:focus {
-  border-bottom: 1px solid;
+.overlay .overlayContent form input[type=text], .overlay .overlayContent form textarea {
+  border-bottom: 1px solid #00000054;
 }
 
 .overlay .overlayContent form textarea {

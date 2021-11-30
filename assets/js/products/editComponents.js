@@ -97,7 +97,6 @@ function allEdit(){
             var input = li.querySelector('.components .componentsMenu .addNewComponent input')
             if(input.value.length > 0){
                 var element = li.querySelector('.components .componentsMenu .addNewComponent span')
-                console.log(element)
                 var closeMenu = true
                 addingComponents(element, closeMenu)
             }

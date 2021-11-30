@@ -142,7 +142,8 @@
 
             <!-- cards -->
             <div class="cardBox">
-                <div class="card">
+                <div class="card draggableCard">
+                    <p hidden class="categoryDescricao">Descrição de Pão Funcional 1</p>
                     <h3>
                         Pão Funcional 1
                     </h3>
@@ -154,7 +155,8 @@
                         <p>Clique Duas Vezes Para Editar</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card draggableCard">
+                    <p hidden class="categoryDescricao">Descrição de Pão Funcional 2</p>
                     <h3>
                         Pão Funcional 2
                     </h3>
@@ -167,7 +169,8 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card draggableCard">
+                    <p hidden class="categoryDescricao">Descrição de Brownie</p>
                     <h3>
                         Brownie
                     </h3>
@@ -180,7 +183,8 @@
                     </div>
                 </div>
                 
-                <div class="card">
+                <div class="card draggableCard">
+                    <p hidden class="categoryDescricao">Descrição de Baguete</p>
                     <h3>
                         Baguete
                     </h3>
@@ -193,7 +197,8 @@
                     </div>
                 </div>
                 
-                <div class="card">
+                <div class="card draggableCard">
+                    <p hidden class="categoryDescricao">Descrição de Baguete</p>
                     <h3>
                         Baguete
                     </h3>
@@ -207,7 +212,7 @@
                 </div>
 
                 <div class="card cardPlus">
-                    
+                    <span>+</span>
                 </div>
             </div>
             
@@ -775,16 +780,22 @@
 
     <div class="overlayAddEdit overlay">
         <div class="overlayContent">
-            <div class="img">
-                <img src="assets/images/brownie.png" alt="">
+            <div class="close">
+                +
             </div>
-            <form action="">
+            <div class="img">
+                <label>
+                    <input hidden type="file" name="" id="newCategoryEdit">
+                    <img src="assets/images/imgPlaceholder.png" alt="">
+                </label>
+                
+            </div>
+            <form>
                 <p>NOME:</p>
-                <input type="text" name="productName" value="Brownie">
+                <input type="text" name="productName" value="">
 
                 <p>DESCRIÇÃO:</p>
-                <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti provident incidunt illo alias doloribus eos rerum
-                </textarea>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
 
                 <div class="formSubmits">
                     <input type="submit" name="yes" value="SALVAR">
@@ -802,12 +813,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.js" integrity="sha512-Fc8SDJVBwajCGX0A9z8lBeRPaCjR25Ek577z9PtQLB7CLBz7Mw1XhjbcD2yDWrGszL/uezKGidtGCng6Fhz3+A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
     <script type="module" src="assets/js/products/sortableList.js"></script>
+    <script type="module" src="assets/js/products/sortableCards.js"></script>
     <script type="module" src="assets/js/products/saveProducts.js"></script>
     <script type="module" src="assets/js/products/deleteItem.js"></script>
-    <script type="module" src="assets/js/products/categoryAddEdit.js"></script>
+    <script type="module" src="assets/js/products/EditCategory.js"></script>
     <script type="module" src="assets/js/products/updatePic.js"></script>
     <script type="module" src="assets/js/products/addProduct.js"></script>
     <script type="module" src="assets/js/products/editComponents.js"></script>
+    <script type="module" src="assets/js/products/addCategory.js"></script>
     <script type="module" src="assets/js/closeOverlay.js"></script>
     <script type="module" src="assets/js/savingLoad.js"></script>
     <script type="module" src="assets/js/main.js"></script>

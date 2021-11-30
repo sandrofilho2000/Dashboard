@@ -8,7 +8,6 @@ function updatePic(e, newProduct=false, updateNew=false){
     if(newProduct==false){
         if(updateNew==true){
             var file = e.getAttribute('src')
-            console.log(file)
             e.parentElement.querySelector('img').setAttribute('src', file)
         }else{
             var file = e.currentTarget.files
