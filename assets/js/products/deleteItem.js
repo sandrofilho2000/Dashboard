@@ -27,25 +27,58 @@ function closeWarning(e, timeOut=false, self = ''){
 }
 
 //OPEN WARNING
-function openWarning(e, deleteBtn){
-    e.stopPropagation()
-    var product = deleteBtn.parentElement.parentElement.parentElement
-    document.querySelector('.warning').classList.add("active")
-
-    var self = deleteBtn.parentElement.parentElement.parentElement
-
-    var nome = self.querySelector('.nameImg .divContainer input[type=text]').value
-    var img  = self.querySelector('.nameImg .divContainer img').getAttribute('src')
+function openWarning(e, deleteBtn='', category=false, categoryCard = ''){
+    if(category==false){
+        e.stopPropagation()
+        var product = deleteBtn.parentElement.parentElement.parentElement
+        document.querySelector('.warning').classList.add("active")
     
-    document.querySelector('.warning .item h5').innerHTML = nome
-    document.querySelector('.warning .item img').setAttribute('src', img)
+        var self = deleteBtn.parentElement.parentElement.parentElement
+    
+        var nome = self.querySelector('.nameImg .divContainer input[type=text]').value
+        var img  = self.querySelector('.nameImg .divContainer img').getAttribute('src')
+        
+        document.querySelector('.warning .item h5').innerHTML = nome
+        document.querySelector('.warning .item img').setAttribute('src', img)
+    
+        document.querySelector('span.yes').addEventListener('click', function(e){
+            try{
+                deleteItem(e, self)
+                var timeOut = true
+                document.querySelector('.warning').classList.add("delete")
+                closeWarning(e, timeOut)
+            }catch{}
 
-    document.querySelector('span.yes').addEventListener('click', function(e){
-        deleteItem(e, self)
-        var timeOut = true
-        document.querySelector('.warning').classList.add("delete")
-        closeWarning(e, timeOut)
-    })
+        })
+    }else if(category==true){
+        document.querySelector('.warning').classList.add("active")
+
+        var parent = e.currentTarget.parentElement.parentElement.parentElement
+        var img = parent.querySelector('img').getAttribute('src')
+        var nome = parent.querySelector('[name=productName]').value.trim()
+
+        document.querySelector('.warning .item h5').innerHTML = nome
+        document.querySelector('.warning h4').innerHTML = "Deseja realmente excluir essa categoria?"
+        document.querySelector('.warning .item img').setAttribute('src', img)
+
+        $(function(){
+            $('span.yes').unbind().click(function(e){
+                var timeOut = true
+                document.querySelector('.warning').classList.add("delete")
+                closeWarning(e, timeOut)
+                try{
+                    categoryCard.parentElement.removeChild(categoryCard)
+                    var overlayContent = document.querySelector('.overlayAddEdit')
+                    overlayContent.querySelector("[name=productName]").value = ''
+                    overlayContent.querySelector(".img img").setAttribute('src', 'assets/images/imgPlaceholder.png')
+                    overlayContent.querySelector("textarea").value = '';
+                    overlayContent.style.display = 'none'
+                }catch{}
+
+            })
+        })
+        
+    }
 }
 
 function allDelete(){
@@ -78,4 +111,4 @@ allDelete()
 
 
 
-export { allDelete }
+export { allDelete, openWarning, closeWarning }

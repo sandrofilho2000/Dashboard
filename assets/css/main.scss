@@ -45,7 +45,7 @@ input::-webkit-inner-spin-button {
   background: #20B042;
 }
 
-img {
+img, .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -133,7 +133,7 @@ img {
     width: 100vw;
     height: 100vh;
     background: black;
-    z-index: 99999;
+    z-index: 99999999;
     top: 0;
     left: 0;  
     display: -webkit-box;

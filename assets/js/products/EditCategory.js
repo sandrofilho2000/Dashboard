@@ -1,5 +1,7 @@
 import { save } from "../savingLoad.js"
 import { addCategory } from "./addCategory.js"
+import { openWarning } from "./deleteItem.js"
+
 
 //CLEANING OVERLAY INPUT FIELDS
 function cleanCategory(e, x = false){
@@ -9,7 +11,6 @@ function cleanCategory(e, x = false){
         var overlayContent = e.currentTarget.parentElement
     }
 
-    
     overlayContent.querySelector("[name=productName]").value = ''
     overlayContent.querySelector(".img img").setAttribute('src', 'assets/images/imgPlaceholder.png')
     overlayContent.querySelector("textarea").value = '';
@@ -69,7 +70,7 @@ function openCategory(e, newCategory=false){
     overlay.style.display = 'flex'
 
     var target = e.currentTarget
-
+    
 
     $(function(){
         $("#newCategoryEdit").unbind().change((event)=>{
@@ -110,6 +111,16 @@ function openCategory(e, newCategory=false){
         })
         
     }
+
+    document.querySelector('[name=not]').addEventListener('click', function(e){
+
+        e.preventDefault()
+        e.stopPropagation()
+        var category = true
+        openWarning(e, category, category, target)
+
+
+    })
 }
 
 

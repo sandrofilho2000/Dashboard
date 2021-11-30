@@ -1,6 +1,7 @@
 import { openCategory, verifyFields, cleanCategory } from "./EditCategory.js"
 import { save } from "../savingLoad.js"
-import { allSortableCards } from "./sortableCards.js"
+import { allSortableCards } from "./sortableCards.js";
+import { openWarning, closeWarning } from './deleteItem.js'
 
 function addCategory(e, target){
     e.preventDefault()
@@ -27,6 +28,7 @@ function addCategory(e, target){
         document.querySelector('.cardBox').insertBefore(newCategory.firstChild, document.querySelector(".cardPlus").previousSibling);
         save()
         cleanCategory(e)
+
         document.querySelectorAll("div.card:not(.cardPlus)").forEach((card)=>{
             card.addEventListener('dblclick', (e)=>{
                 openCategory(e)
@@ -38,6 +40,15 @@ function addCategory(e, target){
                 }, 1800);
             })
             allSortableCards()
+        })
+
+        document.querySelector('[name=not]').addEventListener('click', function(e){
+
+            e.preventDefault()
+            e.stopPropagation()
+            var category = true
+            openWarning(e, category, category, target)
+    
         })
 
         

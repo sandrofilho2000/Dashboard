@@ -705,7 +705,7 @@
 }
 
 .warning.active {
-  z-index: 99;
+  z-index: 10000;
   opacity: 1;
   -webkit-transform: rotate(0deg) translateX(0px) translateY(0px);
           transform: rotate(0deg) translateX(0px) translateY(0px);
